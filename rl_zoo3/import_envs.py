@@ -45,6 +45,11 @@ try:
 except ImportError:
     pass
 
+try:
+    from viewpoint_env.viewpointWorld import CoverageEnv
+except Exception as e:
+    print(e) 
+
 
 # Register no vel envs
 def create_no_vel_env(env_id: str) -> Callable[[Optional[str]], gym.Env]:

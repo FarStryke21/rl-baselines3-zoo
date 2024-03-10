@@ -1,4 +1,13 @@
 # Tuned
+CoverageEnv-v0:
+  n_timesteps: 100
+  policy: 'MlpPolicy'
+  noise_type: 'normal'
+  noise_type: 'ornstein-uhlenbeck'
+  noise_std: 0.5
+  learning_rate: !!float 1e-3
+  policy_kwargs: "dict(net_arch=[400, 300])"
+
 MountainCarContinuous-v0:
   n_timesteps: 300000
   policy: 'MlpPolicy'
